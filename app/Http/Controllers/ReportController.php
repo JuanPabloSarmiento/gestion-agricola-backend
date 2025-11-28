@@ -14,7 +14,8 @@ class ReportController extends Controller
      */
     public function cultivosPdf()
     {
-        $cultivos = Cultivo::all();
+        $cultivos = Cultivo::with('aplicaciones')->get();
+
 
         $pdf = Pdf::loadView('reports.cultivos', compact('cultivos'));
         return $pdf->stream('cultivos.pdf'); // descarga inline

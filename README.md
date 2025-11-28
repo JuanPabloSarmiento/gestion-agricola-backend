@@ -274,3 +274,15 @@ CultivoController → CRUD cultivos
 AnimalController → CRUD animales
 
 ReportController → PDF de cultivos y animales
+
+POST    /api/register
+POST    /api/login
+GET     /api/animales
+POST    /api/animales
+GET     /api/cultivos
+POST    /api/cultivos
+POST    /api/cultivos/{id}/insumos
+GET     /api/reportes/cultivo
+
+server docker: php artisan serve --host=0.0.0.0 --port=8000
+acceder: docker compose exec app bash
